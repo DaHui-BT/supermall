@@ -35,7 +35,7 @@
         }else {
           this.$store.getters.cartList.forEach(item => item.checked = true)
         }
-        this.$toast.methods.isShow
+        // this.$toast.methods.isShow
       }
     },
     computed: {
@@ -53,7 +53,7 @@
         },0)
       },
       isSelectAll(){
-        if (this.cartlength === 0) {
+        if (this.$store.state.cartList.length === 0) {
           return false
         }else {
           return !(this.$store.state.cartList.filter(item => !item.checked).length)
